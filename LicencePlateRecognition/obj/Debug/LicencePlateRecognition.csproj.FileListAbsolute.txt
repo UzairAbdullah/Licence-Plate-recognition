@@ -1,9 +1,0 @@
-c:\users\uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\LicencePlateRecognition.exe.config
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.csprojResolveAssemblyReference.cache
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.Form1.resources
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.Properties.Resources.resources
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.csproj.GenerateResource.Cache
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\LicencePlateRecognition.exe
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\LicencePlateRecognition.pdb
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.exe
-C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.pdb

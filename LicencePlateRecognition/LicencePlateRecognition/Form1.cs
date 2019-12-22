@@ -54,19 +54,6 @@ namespace LicencePlateRecognition
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
        
             //pictureBox2.Image = grayscale.Bitmap;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
