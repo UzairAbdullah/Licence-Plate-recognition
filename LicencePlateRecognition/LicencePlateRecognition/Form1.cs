@@ -40,18 +40,44 @@ namespace LicencePlateRecognition
             //Image<Bgr, byte> imgContour = new Image<Bgr, byte>(open.FileName);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             //Converting to greyscale
-            Image<Gray, byte> imgOutput = imgInput.Convert<Gray,byte>().ThresholdBinary(new Gray(150), new Gray(255));
-            Image<Gray, byte> gray = new Image<Gray, byte>(open.FileName);
+            Image<Gray, byte> imgOutput = imgInput.Convert<Gray,byte>().ThresholdBinary(new Gray(100), new Gray(255));
+            //Image<Gray, byte> gray = imgInput.Convert<Gray, byte>().ThresholdBinary(new Gray(100), new Gray(255));
             Emgu.CV.Util.VectorOfVectorOfPoint contours = new Emgu.CV.Util.VectorOfVectorOfPoint();
             Mat hier = new Mat();
             CvInvoke.FindContours(imgOutput,contours,hier,Emgu.CV.CvEnum.RetrType.External,Emgu.CV.CvEnum.ChainApproxMethod.ChainApproxSimple);
-            CvInvoke.DrawContours(imgInput, contours, -1, new MCvScalar(255, 0, 0));
-            CvInvoke.DrawContours(imgOutput, contours, -1, new MCvScalar(255, 0, 0));
+            //CvInvoke.DrawContours(imgInput, contours, -1, new MCvScalar(255, 0,0),3);
             pictureBox2.Image = imgInput.Bitmap;
             pictureBox1.Image = imgOutput.Bitmap;
 
+
             
-            
+
+            Dictionary<int ,double> dict = new Dictionary<int,double>();
+            if (contours.Size > 0)
+            {
+                for (int i = 0;i<contours.Size;i++)
+                {
+                    //double area = CvInvoke.ContourArea(contours[i]);
+                    Rectangle rect = CvInvoke.BoundingRectangle(contours[i]);
+                    //CvInvoke.DrawContours(imgInput, contours, -1, new MCvScalar(255, 0, 0), 3);
+                    //CvInvoke.Rectangle(imgInput, rect, new MCvScalar(255, 0, 0), 3);
+                    double ratio = rect.Width / rect.Height;
+                    double area = rect.Width * rect.Height;
+
+                    if (/*rect.Width > 100 && rect.Width < 300 && rect.Height < 100 */area >1000 && area <pictureBox2.Width * pictureBox2.Height)
+                    {
+                        dict.Add(i, area);
+                        CvInvoke.Rectangle(imgInput, rect, new MCvScalar(255, 0, 0), 3);
+                        //MessageBox.Show(string.Format("Width is: {0}\nHeight is: {1}\nArea is: {2}", rect.Width, rect.Height, area));
+                    }
+                }
+                foreach (var it in dict)
+                {
+                    int key = int.Parse(it.Key.ToString());
+                    //CvInvoke.DrawContours(imgInput, contours, key, new MCvScalar(255, 0, 0), 3);
+                    
+                }
+            }
             
             
        
@@ -62,7 +88,7 @@ namespace LicencePlateRecognition
 
             //conversion to binary image
             //pictureBox3.Image = Image.FromFile(op.FileName);
-            //pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            //pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;int 
             //pictureBox3.BorderStyle = BorderStyle.Fixed3D;
             //Bitmap img = new Bitmap(pictureBox2.Image);
             

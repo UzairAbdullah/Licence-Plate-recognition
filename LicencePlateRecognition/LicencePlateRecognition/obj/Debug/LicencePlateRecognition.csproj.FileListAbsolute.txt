@@ -36,9 +36,7 @@ C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\Lic
 C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\tr\ZedGraph.resources.dll
 C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\Uzair\documents\visual studio 2013\Projects\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\zh-tw\ZedGraph.resources.dll
-D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\LicencePlateRecognition.exe.config
-D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.exe
-D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.pdb
+D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\ZedGraph.xml
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\x64\concrt140.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\x64\cvextern.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\x64\msvcp140.dll
@@ -49,6 +47,7 @@ D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePla
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\x86\msvcp140.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\x86\opencv_videoio_ffmpeg411.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\x86\vcruntime140.dll
+D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\LicencePlateRecognition.exe.config
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\LicencePlateRecognition.exe
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\LicencePlateRecognition.pdb
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\Emgu.CV.UI.dll
@@ -56,7 +55,6 @@ D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePla
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\ZedGraph.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\Emgu.CV.UI.xml
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\Emgu.CV.World.xml
-D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\ZedGraph.xml
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\de\ZedGraph.resources.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\es\ZedGraph.resources.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\fr\ZedGraph.resources.dll
@@ -70,7 +68,8 @@ D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePla
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\tr\ZedGraph.resources.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\zh-cn\ZedGraph.resources.dll
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\zh-tw\ZedGraph.resources.dll
-D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.csprojResolveAssemblyReference.cache
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.Form1.resources
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.Properties.Resources.resources
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.csproj.GenerateResource.Cache
+D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.exe
+D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.pdb
