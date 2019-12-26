@@ -73,3 +73,6 @@ D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePla
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.csproj.GenerateResource.Cache
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.exe
 D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.pdb
+D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\obj\Debug\LicencePlateRecognition.csprojResolveAssemblyReference.cache
+D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\AForge.dll
+D:\BU\semester 5\VP\Licence-Plate-recognition\LicencePlateRecognition\LicencePlateRecognition\bin\Debug\AForge.xml

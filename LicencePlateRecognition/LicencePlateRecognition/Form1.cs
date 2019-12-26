@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+using AForge;
 using Emgu.CV;
 using Emgu.Util;
 using Emgu.CV.Structure;
@@ -40,7 +42,14 @@ namespace LicencePlateRecognition
             //Image<Bgr, byte> imgContour = new Image<Bgr, byte>(open.FileName);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             //Converting to greyscale
+            Image<Gray, byte> gray = imgInput.Convert<Gray, byte>().PyrDown().PyrUp();
             Image<Gray, byte> imgOutput = imgInput.Convert<Gray,byte>().ThresholdBinary(new Gray(100), new Gray(255));
+            Image<Gray, byte> imgCanny = gray.Canny(120,180);
+            
+            //Image<Gray, byte> imgCanny = new Image<Gray, byte>(imgInput.Width, imgInput.Height, new Gray(0));
+            //imgCanny = imgOutput.Canny(50, 20);
+            
+            
             //Image<Gray, byte> gray = imgInput.Convert<Gray, byte>().ThresholdBinary(new Gray(100), new Gray(255));
             Emgu.CV.Util.VectorOfVectorOfPoint contours = new Emgu.CV.Util.VectorOfVectorOfPoint();
             Mat hier = new Mat();
@@ -48,7 +57,6 @@ namespace LicencePlateRecognition
             //CvInvoke.DrawContours(imgInput, contours, -1, new MCvScalar(255, 0,0),3);
             pictureBox2.Image = imgInput.Bitmap;
             pictureBox1.Image = imgOutput.Bitmap;
-
 
             
 
@@ -64,10 +72,11 @@ namespace LicencePlateRecognition
                     double ratio = rect.Width / rect.Height;
                     double area = rect.Width * rect.Height;
 
-                    if (/*rect.Width > 100 && rect.Width < 300 && rect.Height < 100 */area >1000 && area <pictureBox2.Width * pictureBox2.Height)
+                    if (/*rect.Width > 100 && rect.Width < 300 && rect.Height < 100 */area >2000 && area < pictureBox2.Width*pictureBox2.Height)
                     {
                         dict.Add(i, area);
                         CvInvoke.Rectangle(imgInput, rect, new MCvScalar(255, 0, 0), 3);
+                        //Image<Bgr, byte> test = rect.;
                         //MessageBox.Show(string.Format("Width is: {0}\nHeight is: {1}\nArea is: {2}", rect.Width, rect.Height, area));
                     }
                 }
@@ -82,6 +91,8 @@ namespace LicencePlateRecognition
             
        
             //pictureBox2.Image = grayscale.Bitmap;
+            pictureBox1.Image = imgOutput.Bitmap;
+            
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
            // pictureBox1.Image = gray.Bitmap;
 
