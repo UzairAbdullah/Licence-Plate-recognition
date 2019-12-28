@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+using Tesseract;
 using AForge;
 using Emgu.CV;
 using Emgu.Util;
@@ -18,6 +18,9 @@ namespace LicencePlateRecognition
 {
     public partial class Form1 : Form
     {
+        private string m_path = Application.StartupPath + @"\data\";
+        
+        public TesseractEngine tesseract = null;
         Image<Bgr, byte> imgInput;
         public Form1()
         {
@@ -52,13 +55,13 @@ namespace LicencePlateRecognition
             
             //Image<Gray, byte> gray = imgInput.Convert<Gray, byte>().ThresholdBinary(new Gray(100), new Gray(255));
             Emgu.CV.Util.VectorOfVectorOfPoint contours = new Emgu.CV.Util.VectorOfVectorOfPoint();
+            Emgu.CV.Util.VectorOfVectorOfPoint poscont = new Emgu.CV.Util.VectorOfVectorOfPoint();
             Mat hier = new Mat();
             CvInvoke.FindContours(imgOutput,contours,hier,Emgu.CV.CvEnum.RetrType.External,Emgu.CV.CvEnum.ChainApproxMethod.ChainApproxSimple);
             //CvInvoke.DrawContours(imgInput, contours, -1, new MCvScalar(255, 0,0),3);
             pictureBox2.Image = imgInput.Bitmap;
             pictureBox1.Image = imgOutput.Bitmap;
 
-            
 
             Dictionary<int ,double> dict = new Dictionary<int,double>();
             if (contours.Size > 0)
@@ -71,12 +74,13 @@ namespace LicencePlateRecognition
                     //CvInvoke.Rectangle(imgInput, rect, new MCvScalar(255, 0, 0), 3);
                     double ratio = rect.Width / rect.Height;
                     double area = rect.Width * rect.Height;
-
                     if (/*rect.Width > 100 && rect.Width < 300 && rect.Height < 100 */area >2000 && area < pictureBox2.Width*pictureBox2.Height)
                     {
                         dict.Add(i, area);
                         CvInvoke.Rectangle(imgInput, rect, new MCvScalar(255, 0, 0), 3);
-                        //Image<Bgr, byte> test = rect.;
+                        poscont = contours;
+                        
+                        //Image<Bgr, byte> test = contours.ima
                         //MessageBox.Show(string.Format("Width is: {0}\nHeight is: {1}\nArea is: {2}", rect.Width, rect.Height, area));
                     }
                 }
@@ -87,8 +91,8 @@ namespace LicencePlateRecognition
                     
                 }
             }
-            
-            
+
+            tesseract = new TesseractEngine(m_path, "eng");
        
             //pictureBox2.Image = grayscale.Bitmap;
             pictureBox1.Image = imgOutput.Bitmap;
